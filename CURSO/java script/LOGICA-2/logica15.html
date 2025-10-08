@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logica15</title>
+</head>
+<body>
+    
+    <script>
+// 15. DESAFIO 1: Em sistemas de gerenciamento de tempo, é comum converter um total de minutos em horas e minutos. Crie um programa que faça essa conversão. O usuário digita um valor em minutos. Calcule as horas inteiras e e depois os minutos restantes. Exiba a seguinte mensagem: (Ex: "150 minutos equivalem a 2 horas e 30 minutos.").
+
+        const totalMinutosInput = prompt("Conversor de Minutos para Horas\n\nDigite o total de minutos:");
+        const totalMinutos = parseInt(totalMinutosInput);
+
+        if (!isNaN(totalMinutos) && totalMinutos >= 0) {
+            
+            
+            const horas = Math.floor(totalMinutos / 60); // Cálculo das horas inteiras
+            
+            
+            const minutosRestantes = totalMinutos % 60;  // Cálculo dos minutos restantes
+
+            alert(`${totalMinutos} minutos equivalem a ${horas} horas e ${minutosRestantes} minutos.`);
+
+        } 
+        
+        else {
+            alert("Valor inválido. Por favor, insira um número inteiro e não negativo de minutos.");
+        }
+
+    </script>
+    
+</body>
+</html>

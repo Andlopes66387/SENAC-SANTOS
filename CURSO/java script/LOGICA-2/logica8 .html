@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>logica8</title>
+    </head>
+    <body>
+
+<script>
+
+//  8. Área do Círculo: Solicite o raio de um círculo e calcule sua área. DICA: const PI = Math.PI;. Fórmula: Área=π×Raio ao quadrado
+
+        const PI = Math.PI;
+
+        const raio = parseFloat(prompt("Digite o valor do raio do círculo:"));
+
+        if (!isNaN(raio) && raio > 0) {
+            // Fórmula: Área = π * Raio²
+            const area = PI * Math.pow(raio, 2);
+            
+            alert(`A área de um círculo com raio ${raio} é: ${area.toFixed(2)}`);
+        } 
+        else {
+            alert("Valor inválido para o raio. Por favor, insira um número positivo.");
+        }
+
+</script>
+
+    </body>
+</html>

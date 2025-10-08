@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logica12</title>
+</head>
+<body>
+    
+    <script>
+// 12. Elabore um programa que calcule o valor em Reais, correspondente aos dólares que um turista possui no cofre do hotel. O programa deve solicitar os seguintes dados: Quantidade de dólares guardados no cofre e cotação do dólar naquele dia. E deve exibir o valor em reais.
+
+const quantidadeDolares = parseFloat(prompt("Conversor de Dólar para Real\n\nDigite a quantidade de dólares (US$):"));
+const cotacaoDolar = parseFloat(prompt("Digite a cotação do dólar do dia (R$):"));
+
+if (!isNaN(quantidadeDolares) && !isNaN(cotacaoDolar) && quantidadeDolares >= 0 && cotacaoDolar > 0) {
+
+    const valorEmReais = quantidadeDolares * cotacaoDolar;
+
+
+    alert(`US$ ${quantidadeDolares.toFixed(2)} na cotação de R$ ${cotacaoDolar.toFixed(2)} equivalem a R$ ${valorEmReais.toFixed(2)}.`);
+}
+
+else {
+
+    alert("Valores inválidos. Por favor, insira números válidos e positivos para ambos os campos.");
+}
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>logica6</title>
+    </head>
+    <body>
+
+        <script>
+        // 6. Área do Quadrado: Elabore um programa que solicite o lado de um quadrado e calcule sua área. Area=Lado ao quadrado. (Dica: Math.pow(lado, 2))
+        
+        const lado = parseFloat(prompt("Digite o valor do lado do quadrado:"));
+        
+        if (!isNaN(lado) && lado > 0) {
+            const area = Math.pow(lado, 2);
+            alert(`A área de um quadrado com lado ${lado} é: ${area.toFixed(2)}`);
+        }
+
+        </script>
+    </body>
+</html>

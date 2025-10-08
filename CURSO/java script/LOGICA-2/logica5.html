@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>logica5</title>
+    </head>
+    <body>
+
+        
+     <script>
+        
+
+        var distanciaPercorrida;
+        var consumoMedio;
+        var litrosConsumidos;
+
+        distanciaPercorrida = parseFloat(prompt("Digite a distância percorrida (em km):"));
+        consumoMedio = parseFloat(prompt("Digite o consumo médio do veículo (Km por litro):"));
+
+        litrosConsumidos = distanciaPercorrida / consumoMedio;
+
+        alert("Para percorrer " + distanciaPercorrida + " km foram necessários " + litrosConsumidos.toFixed(3) + " litros de combustível.");
+
+
+    </script>
+    </body>
+</html>

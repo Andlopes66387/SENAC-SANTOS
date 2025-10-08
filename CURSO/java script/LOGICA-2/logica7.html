@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>logica7</title>
+    </head>
+    <body>
+
+        <script>
+            // 7. Volume do Cubo: Solicite o valor da aresta de um cubo e calcule seu volume. Volume = Aresta ao cubo (DICA: Math.pow(aresta, 3)). 
+            // Teorema de Pitágoras: Solicite os valores dos catetos a e b de um triângulo retângulo e calcule o valor da hipotenusa h.
+
+
+            // Entrada de dados
+            const aresta = parseFloat(prompt(" Volume do Cubo  \n\nDigite o valor da aresta do cubo:"));
+
+            if (!isNaN(aresta) && aresta > 0) {
+                const volume = Math.pow(aresta, 3);
+
+                // Saída de dados
+                alert(`O volume de um cubo com aresta ${aresta} é: ${volume.toFixed(2)}`);
+            } else {
+                alert("Valor inválido para a aresta. Por favor, insira um número positivo.");
+            }
+            const catetoA = parseFloat(prompt("--- Teorema de Pitágoras ---\n\nDigite o valor do cateto A:"));
+            const catetoB = parseFloat(prompt("--- Teorema de Pitágoras ---\n\nDigite o valor do cateto B:"));
+
+            if (!isNaN(catetoA) && !isNaN(catetoB) && catetoA > 0 && catetoB > 0) {
+
+                const hipotenusa = Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB, 2));
+                // Saída de dados
+                alert(`A hipotenusa de um triângulo retângulo com catetos ${catetoA} e ${catetoB} é: ${hipotenusa.toFixed(2)}`);
+                
+            } else {
+                alert("Valores inválidos para os catetos. Por favor, insira números positivos para ambos.");
+            }
+
+        </script>
+    </body>
+</html>

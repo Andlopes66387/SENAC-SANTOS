@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>logica11</title>
+    </head>
+    <body>
+
+        <script>
+    // 11. Temperatura (Celsius para Fahrenheit): Solicite a temperatura em Celsius e converta-a para Fahrenheit. Fórmula: Fahrenheit=Celsius×1.8+32
+    
+    const celsius = parseFloat(prompt("Conversor de Temperatura\n\nDigite a temperatura em Celsius (°C):"));
+
+    if (!isNaN(celsius)) {
+        const fahrenheit = (celsius * 1.8) + 32;  // Fórmula: Fahrenheit = (Celsius * 9/5) + 32 ou Celsius * 1.8 + 32
+
+
+        alert(`${celsius.toFixed(1)}°C equivale a ${fahrenheit.toFixed(1)}°F.`);
+    } 
+    
+    else {
+        alert("Valor inválido. Por favor, insira um número para a temperatura.");
+    }
+
+           </script>
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logica13</title>
+</head>
+<body>
+    
+    <script>
+        // 13. Crie um programa que calcule a média simples de três notas de um aluno e, em seguida, arredonde essa média para o inteiro mais próximo. DICA: Use a função Math.round() para arredondar o valor da média final.
+        
+        const nota1 = parseFloat(prompt("Cálculo de Média\n\nDigite a primeira nota:"));
+        const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+        const nota3 = parseFloat(prompt("Digite a terceira nota:"));
+
+        if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3) && nota1 >= 0 && nota2 >= 0 && nota3 >= 0) {
+          
+            const media = (nota1 + nota2 + nota3) / 3;
+            const mediaArredondada = Math.round(media);
+
+            alert(`Notas: ${nota1.toFixed(1)}, ${nota2.toFixed(1)}, ${nota3.toFixed(1)}\nMédia: ${media.toFixed(2)}\nMédia Arredondada: ${mediaArredondada}`);
+        } else {
+            
+            alert("Valores inválidos. Por favor, insira números válidos e não negativos para as três notas.");
+        }
+
+
+    </script>
+    
+</body>
+</html>

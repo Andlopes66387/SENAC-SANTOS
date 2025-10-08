@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>logica3</title>
+    </head>
+    <body>
+
+        <script>
+        // 3. Um funcionário precisa calcular seu salário líquido. Crie um programa que receba o salário bruto e calcule um desconto fixo e o salário final. Defina uma constante para o valor do desconto de R$ 120.00. DICA: (CONST desconto = 120).
+
+        var salarioBruto;
+        var salarioLiquido;
+        const desconto = 120.00;
+
+        salarioBruto = parseFloat(prompt("Digite o seu salário bruto (R$):"));
+
+        salarioLiquido = salarioBruto - desconto;
+
+        alert("O seu salário líquido, após o desconto de R$ " + desconto.toFixed(2) + ", é: R$ " + salarioLiquido.toFixed(2));
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>logica10</title>
+    </head>
+    <body>
+
+        <script>
+// 10. Preço com Juros Simples: Solicite o valor principal, a taxa de juros (como decimal, Ex: 0.05) e o número de meses. Calcule o montante final. Fórmula: Montante=Principal×(1+Taxa×Meses)
+
+const principal = parseFloat(prompt("Cálculo de Juros Simples\n\nDigite o valor principal (R$):"));
+const taxa = parseFloat(prompt("Digite a taxa de juros mensal (em decimal, ex: 0.05 para 5%):"));
+const meses = parseInt(prompt("Digite o número de meses:"));
+
+if (!isNaN(principal) && !isNaN(taxa) && !isNaN(meses) && principal > 0 && taxa >= 0 && meses > 0) {
+    
+   
+    const montante = principal * (1 + taxa * meses);   // Fórmula: Montante = Principal * (1 + Taxa * Meses)
+
+    alert(`O montante final após ${meses} meses, com uma taxa de ${taxa*100}% a.m., é: R$ ${montante.toFixed(2)}`);
+} else {
+    alert("Valores inválidos. Por favor, insira números válidos e positivos para todos os campos.");}
+    
+</script>
+
+    </body>
+</html>

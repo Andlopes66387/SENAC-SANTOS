@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>erro-Da-divisao</title>
+</head>
+<body>
+    
+    <script>
+ // Elabore um programa que o usuário entre com dois números inteiros e o programa faça a divisão do primeiro pelo segundo número. Vocês devem resolver o problema do erro da divisão por ZERO.
+
+        const dividendo = parseInt(prompt("Digite o primeiro número (dividendo):"));
+        const divisor = parseInt(prompt("Digite o segundo número (divisor):"));
+ 
+        // Verifica se as entradas são números válidos
+        if (isNaN(dividendo) || isNaN(divisor)) {
+            document.write("Erro: Por favor, digite apenas números inteiros válidos.");
+        } 
+        // Verifica se o divisor é zero
+        else if (divisor === 0) {
+            document.write("Erro: Não é possível dividir por zero.");
+        } 
+        
+        else {
+            const resultado = dividendo / divisor;
+            document.write(`O resultado da divisão de ${dividendo} por ${divisor} é: ${resultado}.`);
+        }
+    </script>
+</body>
+</html>
