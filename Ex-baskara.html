@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>baskara</title>
+    </head>
+    <body>
+        <script>
+        // Fazer um programa para ler os três coeficientes de uma equação do segundo grau. Usando a fórmula
+        // de Baskara, calcular e mostrar os valores das raízes x1 e x2 da equação com quatro casas decimais,
+        // conforme exemplo. Se a equação não possuir raízes reais, mostrar uma mensagem.
+
+        const a = parseFloat(prompt("Coeficiente a:"));
+        const b = parseFloat(prompt("Coeficiente b:"));
+        const c = parseFloat(prompt("Coeficiente c:"));
+
+        if (a < b && a < c){
+            alert(`o menor numero é ${a}`)
+        } else if (b < a && b < c)
+         {
+            alert(`o menor numero é ${b}`)
+        } else {
+
+            alert(`o menor numero é ${c}`)
+        }           
+                    
+        </script>
+    </body>
+</html>

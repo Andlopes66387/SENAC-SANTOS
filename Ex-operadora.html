@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operadora</title>
+    </head>
+    <body>
+
+        <script>
+        // Problema "operadora"
+        // Uma operadora de telefonia cobra R$ 50.00 por um plano básico que dá direito a 100 minutos de
+        // telefone. Cada minuto que exceder a franquia de 100 minutos custa R$ 2.00. Fazer um programa para
+        // ler a quantidade de minutos que uma pessoa consumiu, daí mostrar o valor a ser pago.
+        
+        const minutosConsumidos = parseInt(prompt("Digite a quantidade de minutos:"));
+        
+        if (isNaN(minutosConsumidos) || minutosConsumidos < 0) {
+            alert("Erro: Por favor, digite um número válido de minutos.");
+        } 
+        else {
+            const valorPlano = 50.00;
+            let valorAPagar = valorPlano;
+            if (minutosConsumidos > 100) {
+                const minutosExcedentes = minutosConsumidos - 100;
+                valorAPagar += minutosExcedentes * 2.00;
+            }
+        
+            alert(`Valor a pagar: R$ ${valorAPagar.toFixed(2)}`);
+        }
+        </script>
+    </body>
+</html>

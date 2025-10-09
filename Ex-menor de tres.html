@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>menorDetres</title>
+    </head>
+    <body>
+        <script>
+        // Problema "menor_de_tres"
+        // Fazer um programa para ler três números inteiros. Em seguida, mostrar qual o menor dentre os três
+        // números lidos. Em caso de empate, mostrar apenas uma vez.
+
+        const valor1 = parseInt(prompt("Primeiro valor:"));
+        const valor2 = parseInt(prompt("Segundo valor:"));
+        const valor3 = parseInt(prompt("Terceiro valor:"));
+
+        if (isNaN(valor1) || isNaN(valor2) || isNaN(valor3)) {
+            alert("Erro: Por favor, digite apenas números inteiros válidos.");
+
+        } else {
+            const menor = Math.min(valor1, valor2, valor3);
+            
+            alert(`MENOR = ${menor}`);
+        }
+
+
+        </script>
+    </body>
+</html>
