@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document 5A</title>
+    </head>
+    <body>
+
+        <script>
+            // 5) Fazer um programa para calcular o troco no processo de pagamento de um produto de uma mercearia. 
+            // O programa deve ler o preço unitário do produto, a quantidade de unidades compradas deste produto, 
+            // e o valor em dinheiro dado pelo cliente. Seu programa deve mostrar o valor do troco a ser devolvido 
+            // ao cliente. Se o dinheiro dado pelo cliente não for suficiente, mostrar uma mensagem informando o 
+            // valor restante.
+
+            const precoUnitario = parseFloat(prompt("Preço unitário do produto:"));
+            const quantidade = parseInt(prompt("Quantidade comprada:"), 10);
+            const dinheiroRecebido = parseFloat(prompt("Dinheiro recebido:"));
+
+            if (isNaN(precoUnitario) || isNaN(quantidade) || isNaN(dinheiroRecebido) || precoUnitario < 0 || quantidade < 0 || dinheiroRecebido < 0) {
+                alert("Entrada inválida. Por favor, digite valores numéricos e positivos.");
+            } else {
+                const totalCompra = precoUnitario * quantidade;
+
+                // Verifica se o dinheiro recebido é suficiente.
+                if (dinheiroRecebido >= totalCompra) {
+                    const troco = dinheiroRecebido - totalCompra;
+                    alert(`TROCO = ${troco.toFixed(2)}`);
+                } else {
+                    const valorFaltante = totalCompra - dinheiroRecebido;
+                    alert(`DINHEIRO INSUFICIENTE. FALTAM ${valorFaltante.toFixed(2)}`);
+                }
+            }
+        </script>
+
+    </body>
+</html>

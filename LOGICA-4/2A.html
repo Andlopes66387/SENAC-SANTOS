@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document 2A</title>
+    </head>
+    <body>
+
+        <script>
+        // 2) Fazer um programa para ler os três coeficientes de uma equação do segundo grau. 
+        // Usando a fórmula de Bhaskara, calcular e mostrar os valores das raízes x1 e x2 
+        // da equação com quatro casas decimais, conforme exemplo. Se a equação não possuir 
+        // raízes reais, mostrar uma mensagem.
+
+        // Solicita e converte os coeficientes para números
+        const a = parseFloat(prompt("Coeficiente a:"));
+        const b = parseFloat(prompt("Coeficiente b:"));
+        const c = parseFloat(prompt("Coeficiente c:"));
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            alert("Entrada inválida. Por favor, digite apenas números para os coeficientes.");
+        } else {
+            // Calcula o delta
+            const delta = (b * b) - 4 * a * c;
+
+            
+            if (a === 0 || delta < 0) {
+                alert("Esta equação não possui raízes reais");
+            } else {
+                // Calcula as raízes x1 e x2
+                const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+                               alert(`X1 = ${x1.toFixed(4)}\nX2 = ${x2.toFixed(4)}`);
+            }
+        }
+
+    </script>
+    </body>
+</html>

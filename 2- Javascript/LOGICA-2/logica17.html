@@ -14,23 +14,16 @@
         //  – Exemplo: ddmmaaaa). E o programa separe MATEMATICAMENTE em dia, mês e ano: Exemplo: data 
         // digitada 10112025. Exibirá: Dia: 10. Mês: 11. Ano: 2025.
 
-        // --- Variáveis ---
-        // Usar 'let' para variáveis que podem mudar e 'const' para as que não mudam.
         let dataCompleta;
         let dia, mes, ano;
 
         dataCompleta = parseInt(prompt("Digite uma data no formato ddmmaaaa:"));
 
-        // dataCompleta = 10112025
-        // 1. Extrair o ano:
-        // O resto da divisão por 10000 nos dá os 4 últimos dígitos.
         ano = dataCompleta % 10000; // 10112025 % 10000 = 2025
 
-        // 2. Extrair o dia e o mês:
-        // Removemos o ano dividindo por 10000 e pegando a parte inteira.
        
         const diaMes = Math.floor(dataCompleta / 10000); 
-        mes = diaMes % 100; // 1011 % 100 = 11
+        mes = diaMes % 100;              // 1011 % 100 = 11
         dia = Math.floor(diaMes / 100); // floor(10.11) = 10
         alert("Dia: " + dia + "\nMês: " + mes + "\nAno: " + ano);
 

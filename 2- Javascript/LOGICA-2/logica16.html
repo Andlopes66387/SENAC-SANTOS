@@ -32,10 +32,9 @@
         totalMinutosEntrada = (HE * 60) + ME;
         totalMinutosSaida = (HS * 60) + MS;
 
-        // 2. Calcular a duração total em minutos.
-        // Se o tempo de saída for menor que o de entrada, significa que o carro passou da meia-noite.
         if (totalMinutosSaida < totalMinutosEntrada) {
-            // Adiciona 24 horas (em minutos) ao tempo de saída para calcular a duração corretamente.
+
+
             duracaoTotalMinutos = (totalMinutosSaida + minutosEmUmDia) - totalMinutosEntrada;
         } else {
             
