@@ -16,21 +16,21 @@
 
             // Solicita a medida da glicose e converte para número.
             const medidaGlicose = parseFloat(prompt("Digite a medida da glicose:"));
+            
             if (isNaN(medidaGlicose) || medidaGlicose < 0) {
-
-            alert("Entrada inválida. Por favor, digite um valor numérico válido.");
+                alert("Entrada inválida. Por favor, digite um valor numérico válido.");
             } else {
-                
                 let classificacao;
 
-                if (medidaGlicose <= 100) {
+                if (medidaGlicose < 60) {
+                    classificacao = "Muito Baixa";
+                } else if (medidaGlicose <= 100) {
                     classificacao = "Normal";
                 } else if (medidaGlicose <= 140) {
                     classificacao = "Elevado";
                 } else {
                     classificacao = "Diabetes";
                 }
-
                 alert(`Classificação: ${classificacao}`);
             }
         </script>
