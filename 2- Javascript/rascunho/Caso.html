@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Coleta das Entradas do Usuário (Strings)
+        var operacao = prompt('Escolha a operação: +, -, *, ou /');
+        var num1 = prompt('Digite o primeiro número (ex: 10.5):');
+        var num2 = prompt('Digite o segundo número (ex: 5.2):');
+        var resultado, mensagemFinal;
+
+        // 2. Conversão das Entradas para Números Flutuantes (Float)
+        // Usamos parseFloat() para garantir que aceitamos casas decimais.
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        
+
+        // 3. Processamento da Operação usando switch
+        switch (operacao) {
+            case '+':
+                resultado = num1 + num2;
+                mensagemFinal = (num1 + " + " + num2 + " = " + resultado) //`${num1} + ${num2} = ${resultado}`;
+                break;
+
+            case '-':
+                resultado = num1 - num2;
+                mensagemFinal = (num1 + " - " + num2 + " = " + resultado) //`${num1} - ${num2} = ${resultado}`;
+                break;
+
+            case '*':
+                resultado = num1 * num2;
+                mensagemFinal = (num1 + " * " + num2 + " = " + resultado) // `${num1} * ${num2} = ${resultado}`;
+                break;
+
+            case '/':
+                // Tratamento especial para evitar divisão por zero
+                if (num2 === 0) {
+                    mensagemFinal = "Erro: Divisão por zero não é permitida!";
+                } else {
+                    resultado = num1 / num2;
+                    mensagemFinal = (num1 + " / " + num2 + " = " + resultado) // `${num1} / ${num2} = ${resultado}`;
+                }
+                break;
+
+            default:
+                // Caso a operação digitada não seja válida
+                mensagemFinal = 'Operação inválida. Por favor, use +, -, * ou /.';
+                break;
+        }
+
+        // 4. Exibição do Resultado
+        alert("Cálculo: \n" + mensagemFinal);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Entrar com um dia da semana e o programa retorne o nome do dia. Exemplo: 1 = domingo. 2 = segunda-feira.... 7 = sábado
+
+        // = atribuição
+        // == comparação - operador relacional
+        // === comparação - operador relacional (ele compara além do conteúdo a tipo de variável)
+
+        var semana
+
+        semana = prompt("Escolha um número de 1 a 7");
+        semana = parseInt(semana);
+
+        // switch ... case ... break
+
+        switch (semana) {
+            case 1:
+                alert("domingo");
+                break;
+            case 2:
+                alert("Segunda-feira");
+                break;
+            case 3:
+                alert("Terça-feira");
+                break;
+            case 4:
+                alert("Quarta-feira");
+                break;
+            case 5:
+                alert("Quinta-feira");
+                break;
+            case 6:
+                alert("Sexta-feira");
+                break;
+            case 7:
+                alert("sábado");
+                break;
+            default:
+                alert ("Esse dia não existe na semana. Por favor, números de 1 a 7")
+        }
+
+        /*      if (semana == 1)
+                    alert("domingo");
+                else if (semana == 2)
+                    alert("segunda-feira");
+                else if (semana == 3)
+                    alert("terça-feira");
+                else if (semana == 4)
+                    alert("quarta-feira");
+                else if (semana == 5)
+                    alert("quinta-feira");
+                else if (semana == 6)
+                    alert("sexta-feira");
+                else if (semana == 7)
+                    alert("sábado");
+                else
+                    alert("Esse dia não existe na semana. Por favor, números de 1 a 7");
+                */
+    </script>
+</body>
+
+</html>

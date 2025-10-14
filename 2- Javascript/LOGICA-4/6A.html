@@ -15,6 +15,7 @@
             // Diabetes: Maior de 140 mg/dl
 
             // Solicita a medida da glicose e converte para número.
+            
             const medidaGlicose = parseFloat(prompt("Digite a medida da glicose:"));
             
             if (isNaN(medidaGlicose) || medidaGlicose < 0) {
@@ -22,12 +23,15 @@
             } else {
                 let classificacao;
 
-                if (medidaGlicose < 60) {
+                if (medidaGlicose < 60) {  // Muito Baixa - acrescentada para completar.
                     classificacao = "Muito Baixa";
+
                 } else if (medidaGlicose <= 100) {
                     classificacao = "Normal";
+
                 } else if (medidaGlicose <= 140) {
                     classificacao = "Elevado";
+
                 } else {
                     classificacao = "Diabetes";
                 }
