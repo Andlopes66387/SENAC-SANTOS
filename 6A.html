@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document 6A</title>
+    </head>
+    <body>
+
+        <script>
+            // 6) Fazer um programa para ler a quantidade de glicose no sangue de uma pessoa e depois 
+            // mostrar na tela a classificação desta glicose de acordo com a tabela de referência.
+            // Normal: Até 100 mg/dl
+            // Elevado: Maior que 100 até 140 mg/dl
+            // Diabetes: Maior de 140 mg/dl
+
+            // Solicita a medida da glicose e converte para número.
+            const medidaGlicose = parseFloat(prompt("Digite a medida da glicose:"));
+            
+            if (isNaN(medidaGlicose) || medidaGlicose < 0) {
+                alert("Entrada inválida. Por favor, digite um valor numérico válido.");
+            } else {
+                let classificacao;
+
+                if (medidaGlicose < 60) {
+                    classificacao = "Muito Baixa";
+                } else if (medidaGlicose <= 100) {
+                    classificacao = "Normal";
+                } else if (medidaGlicose <= 140) {
+                    classificacao = "Elevado";
+                } else {
+                    classificacao = "Diabetes";
+                }
+                alert(`Classificação: ${classificacao}`);
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document 7A</title>
+    </head>
+    <body>
+
+        <script>
+            // 7) No arremesso de dardo, o atleta tem três chances para lançar o dardo à maior distância que conseguir. 
+            // Você deve criar um programa para, dadas as medidas das três tentativas de lançamento, 
+            // informar qual foi a maior.
+
+            const dist1 = parseFloat(prompt("Digite a primeira distância:"));
+            const dist2 = parseFloat(prompt("Digite a segunda distância:"));
+            const dist3 = parseFloat(prompt("Digite a terceira distância:"));
+
+            if (isNaN(dist1) || isNaN(dist2) || isNaN(dist3)) {
+                alert("Entrada inválida. Por favor, digite valores numéricos válidos.");
+            } else {
+                
+                const maiorDistancia = Math.max(dist1, dist2, dist3);  // Usa Math.max para encontrar a maior distância entre as três.
+
+                alert(`MAIOR DISTÂNCIA = ${maiorDistancia.toFixed(2)}`); // Exibe o resultado formatado com duas casas decimais.
+
+            }
+        </script>
+
+    </body>
+</html>
+0
