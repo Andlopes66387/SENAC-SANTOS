@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 10A</title>
+</head>
+
+<body>
+
+    <script>
+        // 10) Fazer um programa para ler dois números inteiros, e dizer se um número é múltiplo do outro. 
+        // Os números podem ser digitados em qualquer ordem.
+
+        alert("Digite dois números inteiros:");
+        const num1 = parseInt(prompt("Primeiro número:"));
+        const num2 = parseInt(prompt("Segundo número:"));
+
+
+        // Valida se as entradas são números válidos
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Entrada inválida. Por favor, digite apenas números inteiros.");
+        }
+         else {
+            // O operador de módulo (%) retorna o resto de uma divisão. Se o resto for 0, é múltiplo.
+            if (num1 % num2 === 0 || num2 % num1 === 0) {
+                alert("São múltiplos");
+            } else {
+                alert("Não são múltiplos");
+            }
+           }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document 8A</title>
+    </head>
+    <body>
+
+        <script>
+            // 8) Deseja-se converter uma medida de temperatura da escala Celsius para Fahrenheit ou vice-versa. 
+            // Para isso, você deve construir um programa que leia a letra "C" ou "F" indicando em qual 
+            // escala vai ser informada uma temperatura. Em seguida o programa deve mostrar a temperatura 
+            // na outra escala com duas casas decimais.
+
+            const escala = prompt("Você vai digitar a temperatura em qual escala (C/F)?");
+
+            if (escala.toUpperCase() === 'F') {
+                const tempFahrenheit = parseFloat(prompt("Digite a temperatura em Fahrenheit:"));
+                if (isNaN(tempFahrenheit)) {
+                    alert("Entrada inválida. Por favor, digite um valor numérico.");
+                } else {
+                    const tempCelsius = 5.0 / 9.0 * (tempFahrenheit - 32.0);
+                    alert(`Temperatura equivalente em Celsius: ${tempCelsius.toFixed(2)}`);
+                }
+            } else if (escala.toUpperCase() === 'C') {
+                const tempCelsius = parseFloat(prompt("Digite a temperatura em Celsius:"));
+                if (isNaN(tempCelsius)) {
+                    alert("Entrada inválida. Por favor, digite um valor numérico.");
+                } else {
+                    const tempFahrenheit = tempCelsius * 9.0 / 5.0 + 32.0;
+                    alert(`Temperatura equivalente em Fahrenheit: ${tempFahrenheit.toFixed(2)}`);
+                }
+            } else {
+                alert("Escala inválida. Por favor, digite 'C' ou 'F'.");
+            }
+        </script>
+
+    </body>
+</html>

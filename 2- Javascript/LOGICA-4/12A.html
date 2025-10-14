@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 12A</title>
+</head>
+
+<body>
+
+    <script>
+        // 12) Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, 
+        // sabendo que o mesmo pode começar em um dia e terminar em outro, 
+        // tendo uma duração mínima de 1 hora e máxima de 24 horas.
+
+        const horaInicial = parseInt(prompt("Digite a hora inicial do jogo (0-23):"));
+        const horaFinal = parseInt(prompt("Digite a hora final do jogo (0-23):"));
+
+        // Valida se as entradas são números válidos e estão no intervalo de 0 a 23
+        if (isNaN(horaInicial) || isNaN(horaFinal) || horaInicial < 0 || horaInicial > 23 || horaFinal < 0 || horaFinal > 23) {
+            alert("Entrada inválida. Por favor, digite uma hora válida entre 0 e 23.");
+        } else {
+            let duracao;
+
+            if (horaFinal > horaInicial) {
+                // Se o jogo terminou no mesmo dia
+                duracao = horaFinal - horaInicial;
+            } else {
+                // Se o jogo terminou no dia seguinte (ou durou 24h)
+                duracao = (24 - horaInicial) + horaFinal;
+            }
+
+            alert(`O JOGO DUROU ${duracao} HORA(S)`);
+        }
+    </script>
+
+</body>
+</html>

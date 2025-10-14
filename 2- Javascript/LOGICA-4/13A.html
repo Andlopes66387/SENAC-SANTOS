@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 13A</title>
+</head>
+
+<body>
+
+    <script>
+        // 13) Leia os valores das coordenadas X e Y de um ponto no plano cartesiano. 
+        // A seguir, determine qual o quadrante ao qual pertence o ponto (Q1, Q2, Q3 ou Q4). 
+        // Se o ponto estiver na origem, escreva a mensagem “Origem”. 
+        // Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a situação.
+
+        const x = parseFloat(prompt("Digite o valor da coordenada X:"));
+        const y = parseFloat(prompt("Digite o valor da coordenada Y:"));
+
+        // Valida se as entradas são números válidos
+        if (isNaN(x) || isNaN(y)) {
+            alert("Entrada inválida. Por favor, digite valores numéricos para as coordenadas.");
+        } else {
+            let localizacao;
+
+            if (x === 0 && y === 0) {
+                localizacao = "Origem";
+            } else if (x === 0) {
+                localizacao = "Eixo Y";
+            } else if (y === 0) {
+                localizacao = "Eixo X";
+            } else if (x > 0 && y > 0) {
+                localizacao = "Q1";
+            } else if (x < 0 && y > 0) {
+                localizacao = "Q2";
+            } else if (x < 0 && y < 0) {
+                localizacao = "Q3";
+            } else { // x > 0 && y < 0
+                localizacao = "Q4";
+            }
+
+            alert(localizacao);
+        }
+    </script>
+
+</body>
+</html>

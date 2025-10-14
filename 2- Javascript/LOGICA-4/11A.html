@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 11A</title>
+</head>
+
+<body>
+
+    <script>
+        // 11) Uma empresa vai conceder um aumento percentual de salário aos seus funcionários 
+        // dependendo de quanto cada pessoa ganha, conforme tabela.
+
+        const salarioAtual = parseFloat(prompt("Digite o salário da pessoa:"));
+
+        if (isNaN(salarioAtual) || salarioAtual < 0) {
+            alert("Entrada inválida. Por favor, digite um valor de salário válido.");
+            
+        } else {
+            let porcentagem;
+
+            if (salarioAtual <= 1000.00) {
+                porcentagem = 20;
+            } else if (salarioAtual <= 3000.00) {
+                porcentagem = 15;
+            } else if (salarioAtual <= 8000.00) {
+                porcentagem = 10;
+            } else {
+                porcentagem = 5;
+            }
+
+            const aumento = salarioAtual * (porcentagem / 100.0);
+            const novoSalario = salarioAtual + aumento;
+
+            alert(`Novo salário = R$ ${novoSalario.toFixed(2)}\n` +
+                  `Aumento = R$ ${aumento.toFixed(2)}\n` +
+                  `Porcentagem = ${porcentagem} %`);
+        }
+    </script>
+
+</body>
+</html>
+
+
